@@ -31,9 +31,10 @@
             <div class="viewCurrent__container">
                 {{#if moviesData}}
                 {{#each moviesData.data}} <div class="MoviesCss">
-                    <h2>{{attributes.title}}</h2>
-
-                    <p></p>
+                    <img class="Image_container" src="{{attributes.image.url}}" alt="">
+                    <a href="/moviepage" id="{{id}}">
+                        <h2>{{attributes.title}}</h2>
+                    </a>
                 </div>
                 {{/each}}
                 {{else}}

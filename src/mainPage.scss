@@ -9,6 +9,8 @@ body {
   background-color: black;
 }
 
+
+
 .Header {
   background-color: #800020;
   height: 10em;
@@ -25,9 +27,11 @@ body {
     padding: 3px;
     margin-left: 2em;
   }
+
   .Header__logo__a {
     margin-right: auto;
   }
+
   .Header__nav {
     margin-top: 5em;
     min-width: 60%;
@@ -46,9 +50,11 @@ body {
         color: white;
       }
     }
+
     .Header__nav__ul__li__search-input {
       display: none;
     }
+
     .Header__nav__ul__li__search-input--open {
       border: none;
       border-radius: 5px;
@@ -57,18 +63,22 @@ body {
       padding: 1em;
       background: rgba(235, 235, 235, 0.4);
       color: white;
+
       &:focus {
         outline: none;
       }
+
       &::placeholder {
         color: white;
       }
     }
+
     .Header__nav__ul__li__search-icon {
       font-size: 1.4em;
       color: white;
       cursor: pointer;
     }
+
     .Header__nav__ul__li__search-icon--hidden {
       display: none !important;
     }
@@ -175,8 +185,10 @@ body {
     max-width: 80vw;
     scroll-behavior: smooth;
     transition: all 0.25s ease-in;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
     overflow: auto;
     scroll-snap-type: x mandatory;
   }
@@ -222,10 +234,12 @@ body {
       color: whitesmoke;
     }
   }
+
   &__carousel {
     display: flex;
     overflow-x: hidden;
   }
+
   &__carouselPrev {
     background: none;
     color: #ffa500;
@@ -239,6 +253,7 @@ body {
       color: #ffa600de;
     }
   }
+
   &__carouselNext {
     background: none;
     color: #ffa500;

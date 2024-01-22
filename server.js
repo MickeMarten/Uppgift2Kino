@@ -33,9 +33,8 @@ const Menu = [
 
 async function getMovies() {
     try {
-        const response = await fetch('https://plankton-app-xhkom.ondigitalocean.app/api/movies ')
+        const response = await fetch('https://plankton-app-xhkom.ondigitalocean.app/api/movies')
         const data = await response.json();
-        console.log(data);
         return data;
 
     } catch (error) {
@@ -44,9 +43,8 @@ async function getMovies() {
     }
 
 }
-getMovies();
 
-async function renderPage(response, page) {
+async function renderMainPages(response, page) {
     const moviesData = await getMovies();
     response.render(page, {
         menuItems: Menu,
@@ -58,18 +56,21 @@ async function renderPage(response, page) {
 
 
 app.get('/', async (request, response) => {
-    renderPage(response, 'index')
+    renderMainPages(response, 'index')
 
 })
 
 app.get('/aboutus', async (request, response) => {
-    renderPage(response, 'aboutUs')
+    renderMainPages(response, 'aboutus')
 })
 app.get('/movies', async (request, response) => {
-    renderPage(response, 'movies')
+    renderMainPages(response, 'movies')
 })
 
-app.get('/*')
+app.get('/moviepage', async (request, respons) => {
+    respons.send('Hello! Shit goes here')
+
+})
 
 app.use('/static', express.static('./static'));
 
