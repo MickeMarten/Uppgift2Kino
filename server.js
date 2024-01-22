@@ -56,6 +56,11 @@ async function renderMainPages(response, page) {
     });
 }
 
+async function renderMoviePages(response, page) {
+    response.render(page, {
+    })
+}
+
 
 
 app.get('/', async (request, response) => {
@@ -70,8 +75,9 @@ app.get('/movies', async (request, response) => {
     renderMainPages(response, 'movies')
 })
 
+
 app.get('/moviepage', async (request, respons) => {
-    respons.send('Hello! Shit goes here')
+    renderMoviePages(respons, 'moviepage');
 
 })
 
