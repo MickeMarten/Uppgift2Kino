@@ -44,6 +44,8 @@ async function getMovies() {
 
 }
 
+
+
 async function renderMainPages(response, page) {
     const moviesData = await getMovies();
     response.render(page, {
@@ -53,6 +55,7 @@ async function renderMainPages(response, page) {
 
     });
 }
+
 
 
 app.get('/', async (request, response) => {
