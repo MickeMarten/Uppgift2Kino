@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "title": "Magiska Djuräventyr",
+        "category": "Kids",
+        "description": "En underhållande barnfilm",
+        "age_limit": "Ingen åldersgräns",
+        "rating": 4,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4367/1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Äventyret på Regnbågskullen",
+        "category": "Kids",
+        "description": "Äventyr för de små",
+        "age_limit": "Ingen åldersgräns",
+        "rating": 3,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4444/1TummenTummensMammaCinecctSwedenABscaled.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Fantasy Äventyr",
+        "category": "Kids",
+        "description": "Spännande fantasiresa",
+        "age_limit": "Ingen åldersgräns",
+        "rating": 3,
+        "isNew": true,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4295/1_Kari_MayPiaLehto.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Skrattgalna Familjen",
+        "category": "Komedi",
+        "description": "Skrattfest för hela familjen",
+        "age_limit": "Åldersgräns 10 år",
+        "rating": 5,
+        "isNew": true,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4273/6.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Tokroliga Grannar",
+        "category": "Komedi",
+        "description": "Rolig och underhållande",
+        "age_limit": "Åldersgräns 10 år",
+        "rating": 2,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4367/2.png"
+    },
+    {
+        "id": 6,
+        "title": "Skruvad Komedi",
+        "category": "Komedi",
+        "description": "Galna skämt och humor",
+        "age_limit": "Åldersgräns 10 år",
+        "rating": 4,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4393/Pojken_och_hgern_Bild_06_TriArt_Film.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Explosivt Äventyr i Staden",
+        "category": "Action",
+        "description": "Spännande actionäventyr",
+        "age_limit": "Åldersgräns 12 år",
+        "rating": 4,
+        "isNew": true,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4367/3.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Kampen mot Skurkarna",
+        "category": "Action",
+        "description": "Adrenalinfylld action",
+        "age_limit": "Åldersgräns 12 år",
+        "rating": 1,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4410/1.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Explosion i Rymden",
+        "category": "Action",
+        "description": "Rymdäventyr och action",
+        "age_limit": "Åldersgräns 12 år",
+        "rating": 3,
+        "isNew": true,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4403/01.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Mörkrets Skuggor",
+        "category": "Skräck",
+        "description": "Skrämmande och spännande",
+        "age_limit": "Åldersgräns 18 år",
+        "rating": 5,
+        "isNew": true,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4437/DenlillafgelnSOMMAR.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Förbannelsen från Gravkammaren",
+        "category": "Skräck",
+        "description": "Ryslig skräckupplevelse",
+        "age_limit": "Åldersgräns 18 år",
+        "rating": 2,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4302/01.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Skuggornas Mästare",
+        "category": "Skräck",
+        "description": "Mörka hemligheter avslöjas",
+        "age_limit": "Åldersgräns 18 år",
+        "rating": 4,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4225/1.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Action i Staden",
+        "category": "Action",
+        "description": "Snabb och intensiv action",
+        "age_limit": "Åldersgräns 12 år",
+        "rating": 3,
+        "isNew": false,
+        "isReleased": true,
+        "image": "https://kino.nu/uploads/images/media/4403/03.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Den Försvunna Skatten",
+        "category": "Äventyr",
+        "description": "Ett spännande äventyr i jakten på en förlorad skatt",
+        "age_limit": "Åldersgräns 10 år",
+        "rating": 4,
+        "isNew": true,
+        "isReleased": false,
+        "image": "https://kino.nu/uploads/images/media/4403/03.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Magins Hemlighet",
+        "category": "Fantasy",
+        "description": "En resa in i en magisk värld där hemligheter avslöjas",
+        "age_limit": "Ingen åldersgräns",
+        "rating": 5,
+        "isNew": false,
+        "isReleased": false,
+        "image": "https://kino.nu/uploads/images/media/4225/1.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Skräckens Labyrint",
+        "category": "Skräck",
+        "description": "En otäck resa genom en skrämmande labyrint",
+        "age_limit": "Åldersgräns 18 år",
+        "rating": 3,
+        "isNew": false,
+        "isReleased": false,
+        "image": "https://kino.nu/uploads/images/media/4393/Pojken_och_hgern_Bild_06_TriArt_Film.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Komedi Express",
+        "category": "Komedi",
+        "description": "Ett hisnande äventyr fullt av skratt och komik",
+        "age_limit": "Åldersgräns 10 år",
+        "rating": 4,
+        "isNew": true,
+        "isReleased": false,
+        "image": "https://kino.nu/uploads/images/media/4437/DenlillafgelnSOMMAR.jpg"
+    }
+]

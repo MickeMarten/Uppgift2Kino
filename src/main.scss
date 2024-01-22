@@ -1,0 +1,15 @@
+/*In this file there should only be imports from other .scss files,
+then everything will compile to main.css from here. 
+To do this you write @import "insert .scss file name here".*/
+
+@import "header";
+
+@import "footer";
+
+@import "mainPage";
+
+@import "movies";
+
+@import "aboutUs";
+
+@import "modal";

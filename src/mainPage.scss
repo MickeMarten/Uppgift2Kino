@@ -1,0 +1,255 @@
+* {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  max-width: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+.Header {
+  background-color: #800020;
+  height: 10em;
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+  margin-top: 2em;
+
+  .Header__logo {
+    height: 9.5em;
+    width: auto;
+    margin-right: auto;
+    margin-bottom: -7.5em;
+    padding: 3px;
+    margin-left: 2em;
+  }
+  .Header__logo__a {
+    margin-right: auto;
+  }
+  .Header__nav {
+    margin-top: 5em;
+    min-width: 60%;
+
+    .Header__nav__ul {
+      min-width: 60%;
+      list-style: none;
+      display: flex;
+      gap: 8em;
+    }
+
+    .Header__nav__ul__li {
+      a {
+        font-size: 1.4em;
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .Header__nav__ul__li__search-input {
+      display: none;
+    }
+    .Header__nav__ul__li__search-input--open {
+      border: none;
+      border-radius: 5px;
+      width: auto;
+      height: 2em;
+      padding: 1em;
+      background: rgba(235, 235, 235, 0.4);
+      color: white;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: white;
+      }
+    }
+    .Header__nav__ul__li__search-icon {
+      font-size: 1.4em;
+      color: white;
+      cursor: pointer;
+    }
+    .Header__nav__ul__li__search-icon--hidden {
+      display: none !important;
+    }
+  }
+}
+
+.comingMovies {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+  margin: 1rem 1rem;
+
+  .commingMovies__title {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .comingMovies__Container {
+    display: flex;
+    gap: 2em;
+    width: 55em;
+    overflow-x: scroll;
+  }
+
+  .viewCurrent__btn {
+    align-self: center;
+  }
+}
+
+.viewTop3 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1em;
+  margin: 1rem 1rem;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__title {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+
+  &__btn {
+    align-self: center;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    grid-column: 5 / span 6;
+    grid-row: 10 / span 1;
+    height: 30px;
+    justify-self: end;
+    margin: 10px 10px;
+    text-shadow: 1px 1px 0px rgba(#000000, 0.5);
+    width: 120px;
+
+    &:hover {
+      background-color: #ffa600de;
+    }
+
+    &:active {
+      background-color: #ffa500;
+    }
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+  }
+}
+
+.movieTemplate__card {
+  scroll-snap-align: center;
+  min-width: 250px;
+  height: 400px;
+}
+
+.viewCurrent {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 80vw;
+    scroll-behavior: smooth;
+    transition: all 0.25s ease-in;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__title {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem 1rem;
+  }
+
+  &__btn {
+    align-self: center;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    grid-column: 5 / span 6;
+    grid-row: 10 / span 1;
+    height: 30px;
+    justify-self: end;
+    margin: 10px 10px;
+    text-shadow: 1px 1px 0px rgba(#000000, 0.5);
+    width: 120px;
+
+    &:hover {
+      background-color: #ffa600de;
+    }
+
+    &:active {
+      background-color: #ffa500;
+    }
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+  }
+  &__carousel {
+    display: flex;
+    overflow-x: hidden;
+  }
+  &__carouselPrev {
+    background: none;
+    color: #ffa500;
+    align-self: center;
+    font-size: 3rem;
+    margin: 0 1rem;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffa600de;
+    }
+  }
+  &__carouselNext {
+    background: none;
+    color: #ffa500;
+    align-self: center;
+    font-size: 3rem;
+    margin: 0 1rem;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: #ffa600de;
+    }
+  }
+}

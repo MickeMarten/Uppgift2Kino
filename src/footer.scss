@@ -1,0 +1,18 @@
+.footer {
+  width: 100vw;
+  background-color: #464646;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.4em;
+
+  &__container {
+    display: flex;
+    gap: 8em;
+    padding: 1.5em 0 1.5em 0;
+  }
+
+  &__a {
+    text-decoration: none;
+    color: white;
+  }
+}

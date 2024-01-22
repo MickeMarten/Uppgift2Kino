@@ -1,0 +1,99 @@
+.aboutUsMain {
+  @include breakpoint($mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.aboutUs {
+  color: whitesmoke;
+  margin: 100px 0 100px 200px;
+  font-family: roboto;
+
+  @include breakpoint($mobile) {
+    margin: 100px 0 100px 0;
+  }
+
+  &__news {
+    font-size: 2.5rem;
+    margin: 0 0 1.8rem 0;
+    color: #ffa500;
+  }
+
+  &__info {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+}
+
+.openHours {
+  color: whitesmoke;
+  margin: 100px 0 100px 200px;
+  font-family: roboto;
+
+  @include breakpoint($mobile) {
+    margin: 100px 0 100px 0;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin: 0 0 1.8rem 0;
+    color: #ffa500;
+  }
+
+  &__list {
+    font-size: 1.5rem;
+    list-style: none;
+  }
+
+  &__times {
+    margin: 0 0 1rem 0;
+
+    &--yellow {
+      color: #ffa500;
+      display: inline-block;
+      font-weight: 700;
+    }
+  }
+}
+
+.location {
+  color: whitesmoke;
+  margin: 100px 0 100px 200px;
+  font-family: roboto;
+
+  @include breakpoint($mobile) {
+    margin: 100px 0 100px 0;
+  }
+
+  &__title {
+    color: #ffa500;
+    font-size: 2.5rem;
+    margin: 0 0 1.8rem 0;
+  }
+
+  &__adress {
+    font-size: 1.5rem;
+  }
+}
+
+.contact {
+  color: whitesmoke;
+  margin: 100px 0 100px 200px;
+  font-family: roboto;
+
+  @include breakpoint($mobile) {
+    margin: 100px 0 100px 0;
+  }
+
+  &__phone {
+    color: #ffa500;
+    font-size: 2.5rem;
+    margin: 0 0 1.8rem 0;
+  }
+
+  &__number {
+    font-size: 1.5rem;
+  }
+}

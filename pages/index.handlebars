@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css" />
+  <script src="static/Javascript//main.js" type="module"></script>
+  <script src="https://kit.fontawesome.com/4c51990d8f.js"></script>
+
+  <!-- Primary Meta Tags -->
+  <title>BiHjoGrafen</title>
+  <meta name="title" content="BiHjoGrafen" />
+  <meta name="description" content="Se senaste filmerna på bästa biografen i Hjo!" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anschoolacc.github.io/Uppgift-2-En-biograf-sajt/" />
+  <meta property="og:site_name" content="BiHjoGrafen" />
+  <meta property="og:title" content="Boka filmer i Hjo" />
+  <meta property="og:description" content="Se senaste filmerna på bästa biografen i Hjo!" />
+  <meta property="og:image" content="assets\bihjografenlogo.png" />
+  <meta property="og:image:alt" content="Logo for BiHjoGrafen" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://anschoolacc.github.io/Uppgift-2-En-biograf-sajt/" />
+  <meta property="twitter:site_name" content="BiHjoGrafen" />
+  <meta property="twitter:title" content="Boka filmer i Hjo" />
+  <meta property="twitter:description" content="Se senaste filmerna på bästa biografen i Hjo!" />
+  <meta property="twitter:image" content="assets\bihjografenlogo.png" />
+  <meta property="twitter:image:alt" content="Logo for BiHjoGrafen" />
+</head>
+
+<body>
+  {{!-- <header class="Header">
+    <a class="Header__logo__a" href="index.html">
+      <img class="Header__logo" src="assets/bihjografenlogo.png" alt="logo of the site" /></a>
+    <nav class="Header__nav">
+      <ul class="Header__nav__ul">
+        <li class="Header__nav__ul__li">
+          <a href="pages/movies.html">Filmer</a>
+        </li>
+        <li class="Header__nav__ul__li"><a href="">Biljetter</a></li>
+        <li class="Header__nav__ul__li">
+          <a href="pages/aboutUs.html">Om oss</a>
+        </li>
+        <li class="Header__nav__ul__li">
+          <input class="Header__nav__ul__li__search-input" type="text" placeholder="Search..."
+            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'" />
+          <i class="fas fa-search Header__nav__ul__li__search-icon">
+          </i>
+        </li>
+      </ul>
+    </nav>
+  </header> --}}
+  <main>
+    {{!--
+    <section class="viewTop3">
+      <h1 class="viewTop3__title">TOPP 3</h1>
+      <div class="viewTop3__container"></div>
+      <button class="viewTop3__btn">
+        <a href="/pages/movies.handlebars">Se alla filmer</a>
+      </button>
+    </section> --}}
+    {{!-- <section class="viewCurrent">
+      <h1 class="viewCurrent__title">AKTUELLA</h1>
+      <div class="viewCurrent__carousel">
+        <button class="viewCurrent__carouselPrev"><i class="fas fa-arrow-left"></i></button>
+        <div class="viewCurrent__container"></div>
+        <button class="viewCurrent__carouselNext"><i class="fas fa-arrow-right"></i></button>
+      </div>
+      <button class="viewCurrent__btn">
+        <a href="/pages/movies.handlebars">Se alla filmer</a>
+      </button>
+    </section> --}}
+
+    <!-- Coming movies section should be the last section! -->
+
+    {{!-- <section class="comingMovies">
+      <h1 class="commingMovies__title">Kommande filmer</h1>
+      <div class="comingMovies__Container"></div>
+      <!--coming movies is created in coming__movies__Container. -->
+      <button class="viewCurrent__btn">
+        <a href="/pages/movies.handlebars">Se alla filmer</a>
+      </button>
+    </section> --}}
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <a class="footer__a" href="#about">Om oss</a>
+      <a class="footer__a" href="#location">Plats</a>
+      <a class="footer__a" href="#facebook">Facebook</a>
+      <a class="footer__a" href="#twitter">Twitter</a>
+      <a class="footer__a" href="#instagram">Instagram</a>
+    </div>
+  </footer>
+  <template class="movieTemplate">
+    <div class="movieTemplate__card">
+      <div class="movieTemplate__cover"></div>
+      <div class="movieTemplate__img"></div>
+      <h2 class="movieTemplate__title"></h2>
+      <p class="movieTemplate__ageLimit"></p>
+      <p class="movieTemplate__category"></p>
+      <p class="movieTemplate__description"></p>
+      <button class="movieTemplate__button" type="button">
+        Boka biljett
+      </button>
+    </div>
+  </template>
+  <div class="modal hidden">
+    <button class="modal__close-modal">
+      <i class="fa-solid fa-skull-crossbones"></i>
+    </button>
+    <div class="modal__select-wrapper">
+      <p class="modal__p date">Date</p>
+      <select name="date" class="date-list">
+        <option value="2023-12-30">December 30, 2023</option>
+        <option value="2023-12-31">December 31, 2023</option>
+      </select>
+    </div>
+    <div class="modal__select-wrapper">
+      <p class="modal__p time">Time</p>
+      <select name="time" class="time-list">
+        <option value="09:00">9:00 AM</option>
+        <option value="12:00">12:00 PM</option>
+      </select>
+    </div>
+    <div class="modal__btns">
+      <button class="modal__btns__book">Book</button>
+      <button class="modal__btns__cancel">Cancel</button>
+    </div>
+    <div class="modal__message">
+      <p class="modal__offLine">Currently offline. Call 555-98764.</p>
+    </div>
+  </div>
+  <div class="overlay hidden"></div>
+</body>
+
+</html>
