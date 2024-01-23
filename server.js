@@ -46,27 +46,35 @@ async function getMovies() {
 
 
 
-async function renderMainPages(response, page) {
+async function renderMainPages(request, response, page) {
     const moviesData = await getMovies();
-    response.render(page, {
-        menuItems: Menu,
-        moviesData: moviesData,
+    const currentRoute = request.path;
+    const desiredRoute = '/'
 
-
-    });
+    if (currentRoute === desiredRoute) {
+        response.render(page, {
+            menuItems: Menu,
+            moviesData: moviesData,
+        });
+    }
+    else {
+        response.render(page, {
+            menuItems: Menu
+        })
+    }
 }
 
 
 app.get('/', async (request, response) => {
-    renderMainPages(response, 'index')
+    renderMainPages(request, response, 'index')
 
 })
 
 app.get('/aboutus', async (request, response) => {
-    renderMainPages(response, 'aboutus')
+    renderMainPages(request, response, 'aboutus')
 })
 app.get('/movies', async (request, response) => {
-    renderMainPages(response, 'movies')
+    renderMainPages(request, response, 'movies')
 });
 
 
