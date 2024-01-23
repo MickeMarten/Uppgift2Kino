@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "sass:watch": "sass --no-source-map --watch src/main.scss main.css",
-    "sass:compile": "sass --no-source-map src/main.scss main.css"
+    "sass:compile": "sass --no-source-map src/main.scss main.css",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

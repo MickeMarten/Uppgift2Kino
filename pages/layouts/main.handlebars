@@ -30,9 +30,10 @@
             <button class="viewCurrent__carouselPrev"><i class="fas fa-arrow-left"></i></button>
             <div class="viewCurrent__container">
                 {{#if moviesData}}
-                {{#each moviesData.data}} <div class="MoviesCss">
+                {{#each moviesData.data}}
+                <div class="MoviesCss">
                     <img class="Image_container" src="{{attributes.image.url}}" alt="">
-                    <a href="/moviepage" id="{{id}}">
+                    <a href="/moviepage/{{id}}">
                         <h2>{{attributes.title}}</h2>
                     </a>
                 </div>

@@ -56,12 +56,6 @@ async function renderMainPages(response, page) {
     });
 }
 
-async function renderMoviePages(response, page) {
-    response.render(page, {
-    })
-}
-
-
 
 app.get('/', async (request, response) => {
     renderMainPages(response, 'index')
@@ -73,17 +67,33 @@ app.get('/aboutus', async (request, response) => {
 })
 app.get('/movies', async (request, response) => {
     renderMainPages(response, 'movies')
+});
+
+
+app.get('/moviepage/:movieID', async (request, response) => {
+    // renderMoviePages(response, 'moviepage', 'mainmoviepage');
+
+    const movieID = parseInt(request.params.movieID);
+    const moviesData = await getMovies()
+
+    const selectedMovie = moviesData.data.find(movie => movie.id === movieID);
+
+    if (selectedMovie) {
+        response.render('moviepage', {
+            selectedMovie: selectedMovie,
+            layout: 'mainmoviepage',
+        });
+    } else {
+        response.status(404).send('Film hittades inte');
+    }
+
 })
 
 
-app.get('/moviepage', async (request, respons) => {
-    renderMoviePages(respons, 'moviepage');
-
-})
 
 app.use('/static', express.static('./static'));
-
-app.listen(3000, () => {
-    console.log('Deploying at 3000')
+const port = 5080;
+app.listen(port, () => {
+    console.log(`Gate open at: ${port}`)
 
 })
