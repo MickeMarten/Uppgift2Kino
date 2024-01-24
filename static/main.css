@@ -9,6 +9,28 @@ To do this you write @import "insert .scss file name here".*/
   font-size: 1.4em;
 }
 
+.mainMoviePoster {
+  width: 20%;
+  height: 20%;
+}
+
+.mainMoviePage {
+  margin-top: 2em;
+  color: white;
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: center;
+  gap: 2em;
+}
+
+.mainMovieTitle {
+  font-size: 2em;
+}
+
+.mainMovieIntro {
+  max-width: 40em;
+}
+
 .footer__container {
   display: flex;
   gap: 8rem;

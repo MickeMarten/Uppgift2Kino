@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+    <title>Mainmoviepage.handlebars</title>
+</head>
+
+<body>
+    {{#if selectedMovie}}
+    <div class="mainMoviePage">
+        <a href="/">Tillbaka</a>
+        <p class="mainMovieIntro">{{selectedMovie.attributes.intro}}</p>
+        <h2 class="mainMovieTitle">{{selectedMovie.attributes.title}}</h2>
+        <img src="{{selectedMovie.attributes.image.url}}" class="mainMoviePoster"
+            alt="{{selectedMovie.attributes.title}}">
+
+    </div>
+    {{else}}
+    <p>Oops, hittade inte filmen</p>
+    <a href="/">Tillbaka</a>
+    {{/if}}
+
+    {{{body}}}
+</body>
+
+</html>

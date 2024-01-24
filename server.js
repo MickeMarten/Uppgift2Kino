@@ -46,38 +46,61 @@ async function getMovies() {
 
 
 
-async function renderMainPages(response, page) {
+async function renderMainPages(request, response, page) {
     const moviesData = await getMovies();
-    response.render(page, {
-        menuItems: Menu,
-        moviesData: moviesData,
+    const currentRoute = request.path;
+    const desiredRoute = '/'
 
-
-    });
+    if (currentRoute === desiredRoute) {
+        response.render(page, {
+            menuItems: Menu,
+            moviesData: moviesData,
+        });
+    }
+    else {
+        response.render(page, {
+            menuItems: Menu
+        })
+    }
 }
 
 
-
 app.get('/', async (request, response) => {
-    renderMainPages(response, 'index')
+    renderMainPages(request, response, 'index')
 
 })
 
 app.get('/aboutus', async (request, response) => {
-    renderMainPages(response, 'aboutus')
+    renderMainPages(request, response, 'aboutus')
 })
 app.get('/movies', async (request, response) => {
-    renderMainPages(response, 'movies')
+    renderMainPages(request, response, 'movies')
+});
+
+
+app.get('/moviepage/:movieID', async (request, response) => {
+
+    const movieID = parseInt(request.params.movieID);
+    const moviesData = await getMovies()
+
+    const selectedMovie = moviesData.data.find(movie => movie.id === movieID);
+
+    if (selectedMovie) {
+        response.render('moviepage', {
+            selectedMovie: selectedMovie,
+            layout: 'mainmoviepage',
+        });
+    } else {
+        response.status(404).send('Film hittades inte');
+    }
+
 })
 
-app.get('/moviepage', async (request, respons) => {
-    respons.send('Hello! Shit goes here')
 
-})
 
 app.use('/static', express.static('./static'));
-
-app.listen(3000, () => {
-    console.log('Deploying at 3000')
+const port = 5080;
+app.listen(port, () => {
+    console.log(`Deploy the Adeptus Astartes Ultra on world: ${port}`)
 
 })
