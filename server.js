@@ -79,7 +79,6 @@ app.get('/movies', async (request, response) => {
 
 
 app.get('/moviepage/:movieID', async (request, response) => {
-    // renderMoviePages(response, 'moviepage', 'mainmoviepage');
 
     const movieID = parseInt(request.params.movieID);
     const moviesData = await getMovies()
@@ -102,6 +101,6 @@ app.get('/moviepage/:movieID', async (request, response) => {
 app.use('/static', express.static('./static'));
 const port = 5080;
 app.listen(port, () => {
-    console.log(`Gate open at: ${port}`)
+    console.log(`Deploy the Adeptus Astartes Ultra on world: ${port}`)
 
 })
