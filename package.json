@@ -9,11 +9,12 @@
     "sass:compile": "sass --no-source-map src/main.scss main.css",
     "deploy": "nodemon",
     "start": "node server.js",
-    "test": "jest"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^29.7.0",
     "nodemon": "^3.0.3",
     "sass": "^1.69.6",
