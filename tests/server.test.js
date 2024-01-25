@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
 import request from "supertest";
-import app from '../../app.js';
+import app from '../app.js';
 // request = fejka en httprequest. pratar direkt med "express" eller liknande.
 
 test('Response.status(code) is correct on mainmoviepage', async () => {
