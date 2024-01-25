@@ -5,6 +5,8 @@
     font-family: "Roboto", sans-serif;
 }
 
+
+
 .sidebar {
     position: sticky;
     height: 0;
@@ -14,6 +16,7 @@
     margin-bottom: 50dvh;
     margin-right: -200px;
     z-index: 10;
+
     &__container {
         display: flex;
         align-items: center;
@@ -24,9 +27,11 @@
         height: 50dvh;
         border-radius: 0 10px 10px 0;
     }
+
     &__container--open {
         transform: translateX(0%);
     }
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -37,24 +42,29 @@
         padding: 1rem;
         list-style: none;
     }
+
     &__list-item {
         color: white;
         font-size: 1.5rem;
         font-weight: bold;
         transition: 0.1s ease-in-out;
         cursor: pointer;
+
         &:hover {
             scale: 1.1 1;
             color: #ffa500;
         }
     }
+
     &__list-item--active {
         color: #ffa500;
         scale: 1.1 1;
     }
+
     &__search-input {
         display: none;
     }
+
     &__search-input--open {
         display: block;
         height: 2rem;
@@ -64,10 +74,12 @@
         padding: 0.5rem;
         font-size: 1.5rem;
         color: #1a1a1a;
+
         &:focus {
             outline: none;
         }
     }
+
     &__search-icon {
         width: auto;
         font-size: 1.5rem;
@@ -75,17 +87,21 @@
         text-align: center;
         margin: 0 auto;
         height: 31px;
+
         &:hover {
             color: #ffa500;
         }
     }
+
     &__search-icon--hidden {
         display: none !important;
     }
+
     &__toggle-menu {
         color: white;
         font-size: 2rem;
         cursor: pointer;
+
         &:hover {
             color: #ffa500;
         }
@@ -121,7 +137,7 @@ body {
     justify-content: center;
     max-width: 1200px;
     margin-bottom: 100px;
-    
+
     @include breakpoint($mobile) {
         justify-content: center;
     }
@@ -133,6 +149,7 @@ body {
         padding: 1rem 1rem;
         text-align: center;
     }
+
     .movie--hidden {
         display: none;
     }
@@ -237,6 +254,7 @@ body {
         &:hover {
             background-color: #ffa600de;
         }
+
         &:active {
             background-color: #ffa500;
         }

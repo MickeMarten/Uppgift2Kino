@@ -34,59 +34,17 @@
 </head>
 
 <body>
-  {{!-- <header class="Header">
-    <a class="Header__logo__a" href="index.html">
-      <img class="Header__logo" src="assets/bihjografenlogo.png" alt="logo of the site" /></a>
-    <nav class="Header__nav">
-      <ul class="Header__nav__ul">
-        <li class="Header__nav__ul__li">
-          <a href="pages/movies.html">Filmer</a>
-        </li>
-        <li class="Header__nav__ul__li"><a href="">Biljetter</a></li>
-        <li class="Header__nav__ul__li">
-          <a href="pages/aboutUs.html">Om oss</a>
-        </li>
-        <li class="Header__nav__ul__li">
-          <input class="Header__nav__ul__li__search-input" type="text" placeholder="Search..."
-            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search...'" />
-          <i class="fas fa-search Header__nav__ul__li__search-icon">
-          </i>
-        </li>
-      </ul>
-    </nav>
-  </header> --}}
+
   <main>
-    {{!--
-    <section class="viewTop3">
-      <h1 class="viewTop3__title">TOPP 3</h1>
-      <div class="viewTop3__container"></div>
-      <button class="viewTop3__btn">
-        <a href="/pages/movies.handlebars">Se alla filmer</a>
-      </button>
-    </section> --}}
-    {{!-- <section class="viewCurrent">
-      <h1 class="viewCurrent__title">AKTUELLA</h1>
-      <div class="viewCurrent__carousel">
-        <button class="viewCurrent__carouselPrev"><i class="fas fa-arrow-left"></i></button>
-        <div class="viewCurrent__container"></div>
-        <button class="viewCurrent__carouselNext"><i class="fas fa-arrow-right"></i></button>
-      </div>
-      <button class="viewCurrent__btn">
-        <a href="/pages/movies.handlebars">Se alla filmer</a>
-      </button>
-    </section> --}}
 
-    <!-- Coming movies section should be the last section! -->
 
-    {{!-- <section class="comingMovies">
-      <h1 class="commingMovies__title">Kommande filmer</h1>
-      <div class="comingMovies__Container"></div>
-      <!--coming movies is created in coming__movies__Container. -->
-      <button class="viewCurrent__btn">
-        <a href="/pages/movies.handlebars">Se alla filmer</a>
-      </button>
-    </section> --}}
+    <div class="container">
+      <h1 class="viewTop3__title">TOPP TRE</h1>
+      <section class="viewTop3__container"></section>
+      <section class="allMovies"></section>
+    </div>
   </main>
+
   <footer class="footer">
     <div class="footer__container">
       <a class="footer__a" href="#about">Om oss</a>
@@ -96,6 +54,7 @@
       <a class="footer__a" href="#instagram">Instagram</a>
     </div>
   </footer>
+
   <template class="movieTemplate">
     <div class="movieTemplate__card">
       <div class="movieTemplate__cover"></div>
@@ -109,6 +68,7 @@
       </button>
     </div>
   </template>
+
   <div class="modal hidden">
     <button class="modal__close-modal">
       <i class="fa-solid fa-skull-crossbones"></i>

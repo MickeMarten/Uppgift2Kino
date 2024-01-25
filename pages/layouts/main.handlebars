@@ -25,26 +25,24 @@
     </header>
 
     <section class="viewCurrent">
-        <h1 class="viewCurrent__title">AKTUELLA</h1>
-        <div class="viewCurrent__carousel">
-            <button class="viewCurrent__carouselPrev"><i class="fas fa-arrow-left"></i></button>
 
-            <div class="viewCurrent__container">
-                {{#if moviesData}}
-                {{#each moviesData.data}}
-                <div class="MoviesCss">
-                    <img class="Image_container" src="{{attributes.image.url}}" alt="">
-                    <a href="/moviepage/{{id}}">
-                        <h2>{{attributes.title}}</h2>
-                    </a>
-                </div>
-                {{/each}}
-                {{else}}
-                <p>Inga filmer tillängliga just nu.</p>
-                {{/if}}
 
+        <div class="viewCurrent__container">
+            {{#if moviesData}}
+            {{#each moviesData.data}}
+            <div class="MoviesCss">
+                <img class="Image_container" src="{{attributes.image.url}}" alt="">
+                <a href="/moviepage/{{id}}">
+                    <h2>{{attributes.title}}</h2>
+                </a>
             </div>
-            <button class="viewCurrent__carouselNext"><i class="fas fa-arrow-right"></i></button>
+            {{/each}}
+            {{else}}
+            <p>Inga filmer tillängliga just nu.</p>
+            {{/if}}
+
+        </div>
+        {{!-- <button class="viewCurrent__carouselNext"><i class="fas fa-arrow-right"></i></button> --}}
         </div>
         <button class="viewCurrent__btn">
             <a href="movies">Se alla filmer</a>

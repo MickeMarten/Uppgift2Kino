@@ -11,11 +11,14 @@
 <body>
     {{#if selectedMovie}}
     <div class="mainMoviePage">
-        <a href="/">Tillbaka</a>
-        <p class="mainMovieIntro">{{selectedMovie.attributes.intro}}</p>
-        <h2 class="mainMovieTitle">{{selectedMovie.attributes.title}}</h2>
+
         <img src="{{selectedMovie.attributes.image.url}}" class="mainMoviePoster"
             alt="{{selectedMovie.attributes.title}}">
+        <h2 class="mainMovieTitle">{{selectedMovie.attributes.title}}</h2>
+        <p class="mainMovieIntro">{{selectedMovie.attributes.intro}}</p>
+        <a href="/">Tillbaka</a>
+
+
 
     </div>
     {{else}}

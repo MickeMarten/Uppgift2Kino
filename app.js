@@ -11,7 +11,7 @@ app.set('views', './pages');
 
 const Menu = [
     {
-        label: 'Filmer',
+        label: 'Biljetter',
         link: '/'
     },
     {
@@ -19,7 +19,7 @@ const Menu = [
         link: '/AboutUs'
     },
     {
-        label: 'biljetter',
+        label: 'Filmer',
         link: '/movies'
     },
 
@@ -50,7 +50,7 @@ async function getMovies() {
 async function renderMainPages(request, response, page) {
     const moviesData = await getMovies();
     const currentRoute = request.path;
-    const desiredRoute = '/'
+    const desiredRoute = '/movies'
 
     if (currentRoute === desiredRoute) {
         response.render(page, {
