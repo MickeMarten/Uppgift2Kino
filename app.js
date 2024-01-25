@@ -8,7 +8,6 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './pages');
 
-
 const Menu = [
     {
         label: 'Biljetter',
@@ -50,7 +49,9 @@ async function getMovies() {
 async function renderMainPages(request, response, page) {
     const moviesData = await getMovies();
     const currentRoute = request.path;
-    const desiredRoute = '/movies'
+    const indexroute = '/index'
+    const aboutUsRoute = '/aboutus'
+    const desiredRoute = '/movies';
 
     if (currentRoute === desiredRoute) {
         response.render(page, {
@@ -58,10 +59,13 @@ async function renderMainPages(request, response, page) {
             moviesData: moviesData,
         });
     }
-    else {
+    else if (currentRoute === indexroute || aboutUsRoute) {
         response.render(page, {
             menuItems: Menu
         })
+    }
+    else {
+        response.status(404).send('404 sidan hittades inte')
     }
 }
 
@@ -74,6 +78,7 @@ app.get('/', async (request, response) => {
 app.get('/aboutus', async (request, response) => {
     renderMainPages(request, response, 'aboutus')
 })
+
 app.get('/movies', async (request, response) => {
     renderMainPages(request, response, 'movies')
 });
@@ -96,6 +101,8 @@ app.get('/moviepage/:movieID', async (request, response) => {
     }
 
 })
+
+
 
 app.use('/static', express.static('./static'));
 
