@@ -3,7 +3,7 @@ import request from "supertest";
 import app from '../../app.js';
 // request = fejka en httprequest. pratar direkt med "express" eller liknande.
 
-test('Response.status(code) is correct', async () => {
+test('Response.status(code) is correct on mainmoviepage', async () => {
     const response = await request(app).get('/moviepage/Ejnåbarsida').expect(404)
 
     expect(response.text).toBe('Film hittades inte')

@@ -7,11 +7,12 @@ To do this you write @import "insert .scss file name here".*/
   display: flex;
   justify-content: space-evenly;
   font-size: 1.4em;
+  height: 3.1em;
 }
 .footer__container {
   display: flex;
   gap: 8em;
-  padding: 1.5em 0 1.5em 0;
+  padding: 1em 0 1.5em 0;
 }
 .footer__a {
   text-decoration: none;
@@ -90,8 +91,11 @@ body {
   display: flex;
   gap: 8em;
 }
+.Header .Header__nav .Header__nav__ul__li {
+  margin-right: 10em;
+}
 .Header .Header__nav .Header__nav__ul__li a {
-  font-size: 1.4em;
+  font-size: 2em;
   text-decoration: none;
   color: white;
 }

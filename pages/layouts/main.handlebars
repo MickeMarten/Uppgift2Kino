@@ -10,12 +10,12 @@
 
 <body>
     <header class="Header">
-        <a class="Header__logo__a" href="{{menuItems.[3].link}}">
-            <img class="Header__logo" src="{{menuItems.[3].logo}}" alt="Logo">
+        <a class="Header__logo__a" href="{{headerItems.[3].link}}">
+            <img class="Header__logo" src="{{headerItems.[3].logo}}" alt="Logo">
         </a>
         <nav class="Header__nav">
             <ul class="Header__nav__ul">
-                {{#each menuItems}}
+                {{#each headerItems}}
                 <li class="Header__nav__ul__li">
                     <a href={{link}}>{{label}}</a>
                 </li>
@@ -48,7 +48,16 @@
             <a href="movies">Se alla filmer</a>
         </button>
     </section>
+
+
     {{{body}}}
+    <footer class="footer">
+        <div class="footer__container">
+            {{#each footer}}
+            <a href="{{link}}" class="footer__a"> {{label}}</a>
+            {{/each}}
+        </div>
+    </footer>
 
 
 

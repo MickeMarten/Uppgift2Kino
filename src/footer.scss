@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-evenly;
   font-size: 1.4em;
+  height: 3.1em;
 
   &__container {
     display: flex;
     gap: 8em;
-    padding: 1.5em 0 1.5em 0;
+    padding: 1em 0 1.5em 0;
   }
 
   &__a {

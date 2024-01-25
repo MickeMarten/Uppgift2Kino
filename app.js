@@ -8,7 +8,7 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './pages');
 
-const Menu = [
+const header = [
     {
         label: 'Biljetter',
         link: '/'
@@ -24,6 +24,31 @@ const Menu = [
 
     {
         logo: '/static/assets/Logo.png',
+        link: '/'
+    }
+
+]
+
+const footer = [
+    {
+        label: 'Om oss',
+        link: 'aboutus',
+    },
+    {
+        label: ' Plats',
+        link: '/'
+    },
+
+    {
+        label: 'Facebook',
+        link: '/'
+    },
+    {
+        label: 'Twitter',
+        link: '/'
+    },
+    {
+        label: 'Instagram',
         link: '/'
     }
 
@@ -51,17 +76,19 @@ async function renderMainPages(request, response, page) {
     const currentRoute = request.path;
     const indexroute = '/index'
     const aboutUsRoute = '/aboutus'
-    const desiredRoute = '/movies';
+    const moviesRoute = '/movies';
 
-    if (currentRoute === desiredRoute) {
+    if (currentRoute === moviesRoute) {
         response.render(page, {
-            menuItems: Menu,
+            headerItems: header,
+            footer: footer,
             moviesData: moviesData,
         });
     }
     else if (currentRoute === indexroute || aboutUsRoute) {
         response.render(page, {
-            menuItems: Menu
+            headerItems: header,
+            footer: footer
         })
     }
     else {
